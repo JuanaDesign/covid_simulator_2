@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Simulador2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <style>
+        body {
+			widht: 100%;
+			height: 100%;
+		}
+		
+		
+        .main-wrapper {
+          position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+          width: 600px;
+          height: 600px;
+          border: 1px solid black;
+		  
+		  
+		}
+		
+		.main-wrapper h1 {
+			position: absolute;
+			bottom: 200px;
+			left: 630px;
+			width: 400px;
+			font-family: 'Lato', sans-serif;
+		}
+		
+		.main-wrapper p {
+			position: absolute;
+			left: 630px;
+			top: 370px;
+			width: 300px;
+			font-family: 'Lato', sans-serif;
+			font-size:15px
+		}
+		
+        .dot {
+          position: absolute;
+          width: 60px;
+          height: 60px;
+          background-color: black;
+          border-radius: 40px;
+          transition: 1s all ease-out;
+          border: 4px solid red;
+        }
+
+        #dot1 { 
+          top: 50px;
+          left: 50px;
+        }
+		
+        #dot2 {
+          top: 50px;
+          right: 352px;
+        }
+
+		#dot3 {
+          top: 50px;
+          left: 115px;
+		  }
+		  
+		#dot4 {
+          top: 50px;
+          right: 287px;
+        }
+		
+
+       
+
+		#dot5 { 
+          top: 190px;
+          left: 50px;
+        }
+		
+        #dot6 {
+          top: 190px;
+          right: 352px;
+        }
+
+		#dot7 {
+          top: 190px;
+          left: 115px;
+		  }
+		  
+		#dot8 {
+          top: 190px;
+          right: 287px;
+        }
+		
+
+
+		#dot9 { 
+          top: 330px;
+          left: 50px;
+        }
+		
+        #dot10 {
+          top: 330px;
+          right: 352px;
+        }
+
+		#dot11 {
+          top: 330px;
+          left: 115px;
+		  }
+		  
+		#dot12 {
+          top: 330px;
+          right: 287px;
+        }
+		
+
+		
+		#dot13 { 
+          top: 470px;
+          left: 50px;
+        }
+		
+        #dot14 {
+          top: 470px;
+          right: 352px;
+        }
+		
+		#dot15 {
+          top: 470px;
+          left: 115px;
+		  }
+		  
+		#dot16 {
+          top: 470px;
+          right: 287px;
+        }
+		
+		
+		
+		
+        #dot8.centered {
+          transform: translate(80px, 0px);
+        }
+
+        #dot10.centered {
+          transform: translate(80px, 0px);
+        }
+
+        #dot12.centered {
+          transform: translate(160px, -0px);
+        }
+
+        #dot13.centered {
+          transform: translate(0px, -0px);
+        }
+		
+		#dot14.centered {
+          transform: translate(160px, 0px);
+        }
+		
+		#dot15.centered {
+          transform: translate(80px, -0px);
+        }
+		
+		#dot16.centered {
+          transform: translate(220px, 0px);
+        }
+
+		
+
+        .dot.red-border {
+          border: 4px solid green;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="main-wrapper">
+        <div id="dot1" class="dot"></div>
+        <div id="dot2" class="dot"></div>
+        <div id="dot3" class="dot"></div>
+        <div id="dot4" class="dot"></div>
+
+        <div id="dot5" class="dot"></div>
+        <div id="dot6" class="dot"></div>
+        <div id="dot7" class="dot"></div>
+        <div id="dot8" class="dot"></div>
+ 
+        <div id="dot9" class="dot"></div>
+        <div id="dot10" class="dot"></div>
+        <div id="dot11" class="dot"></div>
+        <div id="dot12" class="dot"></div>
+        
+        <div id="dot13" class="dot"></div>
+        <div id="dot14" class="dot"></div>
+        <div id="dot15" class="dot"></div>
+        <div id="dot16" class="dot"></div>
+	    <h1 style="color:red; font-size:20px">PÚBLICO</h1>
+    	<p>Este proyecto va dirigido a los usuarios de nuevas tecnologías que pretenden buscar una respuesta sencilla de entender, obteniéndola a través de simuladores esquemáticos.</p>        
+    </div>
+
+    <script>
+   
+      var dot8 = document.getElementById('dot8');
+	  var dot10 = document.getElementById('dot10');
+      var dot12 = document.getElementById('dot12');
+      var dot13 = document.getElementById('dot13');
+	  var dot14 = document.getElementById('dot14');
+      var dot15 = document.getElementById('dot15');
+      var dot16 = document.getElementById('dot16');
+
+
+      makeAnimation();
+      
+      function makeAnimation() {
+        setTimeout(addCenteredClass, 500);
+        setTimeout(changeBorderColor, 1500);
+      }
+
+      function addCenteredClass() {
+        dot8.classList.add("centered");
+		dot10.classList.add("centered");
+        dot12.classList.add("centered");
+        dot13.classList.add("centered");
+	    dot14.classList.add("centered");
+        dot15.classList.add("centered");
+        dot16.classList.add("centered");
+		
+      }
+
+      function changeBorderColor() {
+        dot8.classList.add("red-border");
+        dot10.classList.add("red-border");
+        dot12.classList.add("red-border");
+        dot13.classList.add("red-border");
+        dot14.classList.add("red-border");
+        dot15.classList.add("red-border");
+        dot16.classList.add("red-border");
+
+      }
+    </script>
+  </body>
+</html>
